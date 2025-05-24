@@ -1,3 +1,152 @@
-*{
-    color:orange;
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  padding: 20px;
+  margin: 0;
+  background: linear-gradient(-45deg, #f3ec78, #af4261, #0f2027, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Background Animation Keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*  Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.animated-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #eeeeee;
+}
+
+/*  Projects Section */
+#projects {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.project h3 {
+  font-size: 1.3rem;
+}
+
+.project p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #fff;
+  padding: 10px;
+}
+
+/*  Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.3s; }
+.fade-in:nth-child(2) { animation-delay: 0.6s; }
+.fade-in:nth-child(3) { animation-delay: 0.9s; }
+.fade-in:nth-child(4) { animation-delay: 1.2s; }
+.fade-in:nth-child(5) { animation-delay: 1.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .animated-name {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  #projects h2 {
+    font-size: 1.5rem;
+  }
+
+  .project h3 {
+    font-size: 1.1rem;
+  }
+
+  .project p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .animated-name {
+    font-size: 1.7rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .project {
+    padding: 12px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 5px;
+  }
 }
